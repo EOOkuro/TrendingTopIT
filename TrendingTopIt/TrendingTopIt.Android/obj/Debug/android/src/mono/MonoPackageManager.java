@@ -99,7 +99,10 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "TrendingTopIt.Android.dll" comes first in this list. */
 		"TrendingTopIt.Android.dll",
+		"ExifLib.dll",
 		"FormsViewGroup.dll",
+		"ImageCircle.Forms.Plugin.Abstractions.dll",
+		"ImageCircle.Forms.Plugin.Android.dll",
 		"ModernHttpClient.dll",
 		"Newtonsoft.Json.dll",
 		"OkHttp.dll",
@@ -120,6 +123,13 @@ class MonoPackageManager_Resources {
 		"Xamarin.Forms.Theme.Dark.dll",
 		"Xamarin.Forms.Theme.Light.dll",
 		"Xamarin.Forms.Xaml.dll",
+		"XLabs.Core.dll",
+		"XLabs.Forms.dll",
+		"XLabs.Forms.Droid.dll",
+		"XLabs.IOC.dll",
+		"XLabs.Platform.dll",
+		"XLabs.Platform.Droid.dll",
+		"XLabs.Serialization.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

@@ -12,6 +12,7 @@ namespace TrendingTopIt
 		public MainPage()
 		{
 			InitializeComponent();
-		}
+            
+        }
 	}
 }

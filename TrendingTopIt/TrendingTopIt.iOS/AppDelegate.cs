@@ -23,7 +23,8 @@ namespace TrendingTopIt.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init ();
-			LoadApplication (new TrendingTopIt.App ());
+          
+            LoadApplication (new TrendingTopIt.App ());
             var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
             x = typeof(Xamarin.Forms.Themes.LightThemeResources);
             x = typeof(Xamarin.Forms.Themes.iOS.UnderlineEffect);

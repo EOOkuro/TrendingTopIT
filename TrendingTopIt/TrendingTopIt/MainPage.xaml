@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TrendingTopIt"
              x:Class="TrendingTopIt.MainPage"
+              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"  
              Title="Login"
                  >
 <!--
@@ -19,13 +20,24 @@
     <ContentPage.Content
         VerticalOptions="Center" 
            HorizontalOptions="Center">
+      
         <StackLayout  VerticalOptions="CenterAndExpand" >
-            <Image Source="Icon.png" StyleClass="Rounded" HorizontalOptions="Center" />
 
+            <controls:CircleImage Source="Icon.png" HeightRequest="75" 
+     WidthRequest="100" 
+     HorizontalOptions="Fill" 
+     Aspect="AspectFit" />
+
+
+            <!--
+             <Image Source="Icon.png" StyleClass="Rounded" HorizontalOptions="Center" />
             <Entry x:Name="usernameEntry" Placeholder="username" />
             <Entry x:Name="passwordEntry" IsPassword="true"  Placeholder="Password" />
-            <Button Text="Login" StyleClass="Rounded" />
+            -->
+            <Button Text="Log In" StyleClass="Rounded"  />
+            <Button Text="TAKE THE TOUR" StyleClass="Rounded" />
             <!-- Clicked="OnLoginButtonClicked" -->
+            <Label x:Name="haveAnAccount" Text="Do you have an Account? Sign up" XAlign="Center" TextColor="White"/>
             <Label x:Name="messageLabel" />
         </StackLayout>
     </ContentPage.Content>
