@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TrendingTopIt"
+             x:Class="TrendingTopIt.MainPage"
+             Title="Login"
+                 >
+<!--
+    <Label Text="Welcome to Xamarin Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+    
+    -->
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up" />
+        <!-- Clicked="OnSignUpButtonClicked"-->
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content
+        VerticalOptions="Center" 
+           HorizontalOptions="Center">
+        <StackLayout  VerticalOptions="CenterAndExpand" >
+            <Image Source="Icon.png" StyleClass="Rounded" HorizontalOptions="Center" />
+
+            <Entry x:Name="usernameEntry" Placeholder="username" />
+            <Entry x:Name="passwordEntry" IsPassword="true"  Placeholder="Password" />
+            <Button Text="Login" StyleClass="Rounded" />
+            <!-- Clicked="OnLoginButtonClicked" -->
+            <Label x:Name="messageLabel" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
