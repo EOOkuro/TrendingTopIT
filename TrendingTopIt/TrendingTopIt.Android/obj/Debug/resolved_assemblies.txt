@@ -40,6 +40,9 @@ D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\De
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Xml.Linq.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Runtime.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.ComponentModel.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Reflection.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Resources.ResourceManager.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.IO.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Runtime.Extensions.dll
@@ -52,9 +55,6 @@ D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\De
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.ObjectModel.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Globalization.dll
-D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.ComponentModel.dll
-D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
-D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Reflection.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Linq.Expressions.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Dynamic.Runtime.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Threading.dll

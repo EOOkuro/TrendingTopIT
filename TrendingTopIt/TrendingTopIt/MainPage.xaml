@@ -34,10 +34,11 @@
             <Entry x:Name="usernameEntry" Placeholder="username" />
             <Entry x:Name="passwordEntry" IsPassword="true"  Placeholder="Password" />
             -->
-            <Button Text="Log In" StyleClass="Rounded"  />
-            <Button Text="TAKE THE TOUR" StyleClass="Rounded" />
+            <Button Text="Log In" StyleClass="Rounded" Clicked="OnLoginButtonClicked"  />
+            <!-- Clicked="OnLoginButtonClicked"-->
+            <Button Text="TAKE THE TOUR" StyleClass="Rounded" Clicked="OnSignUpButtonClicked" />
             <!-- Clicked="OnLoginButtonClicked" -->
-            <Label x:Name="haveAnAccount" Text="Do you have an Account? Sign up" XAlign="Center" TextColor="White"/>
+            <Label x:Name="haveAnAccount" Text="Do you have an Account? Sign up" XAlign="Center" TextColor="White" />
             <Label x:Name="messageLabel" />
         </StackLayout>
     </ContentPage.Content>

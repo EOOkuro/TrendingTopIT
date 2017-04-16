@@ -9,7 +9,8 @@ namespace TrendingTopIt
 {
 	public partial class App : Application
 	{
-		public App ()
+        public static bool IsUserLoggedIn;
+        public App ()
 		{
 			InitializeComponent();  
 
@@ -30,5 +31,6 @@ namespace TrendingTopIt
 		{
 			// Handle when your app resumes
 		}
+
 	}
 }

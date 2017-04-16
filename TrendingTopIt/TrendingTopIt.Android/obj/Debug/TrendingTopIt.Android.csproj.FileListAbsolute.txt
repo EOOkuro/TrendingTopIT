@@ -101,5 +101,11 @@ D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\De
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Mono.Android.Export.dll.mdb
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll.mdb
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Runtime.Serialization.Xml.dll.mdb
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\TrendingTopIt.Droid.SignUpPage.xaml.g.cs
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\TrendingTopIt.Droid.Login.xaml.g.cs
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\TrendingTopIt.Droid.MasterPage.xaml.g.cs
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\TrendingTopIt.Droid.TestPage1.xaml.g.cs
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\TrendingTopIt.Droid.TestPage2.xaml.g.cs
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\TrendingTopIt.Droid.TestPage3.xaml.g.cs
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\TrendingTopIt.Android.dll.mdb
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\bin\Debug\TrendingTopIt.Android.dll.mdb
