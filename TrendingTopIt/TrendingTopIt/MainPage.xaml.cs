@@ -12,8 +12,18 @@ namespace TrendingTopIt
 		public MainPage()
 		{
 			InitializeComponent();
-
+            var np = new NavigationPage(this);
             
+            Application.Current.MainPage = np;
+           // new NavigationPage(this);
+          //  NavigationPage.SetHasNavigationBar(this, true);
+
+
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
         }
 
         async void OnSignUpButtonClicked(object sender, EventArgs e)
@@ -39,7 +49,7 @@ namespace TrendingTopIt
             {
                 await Navigation.PopToRootAsync();
             }
-            Application.Current.MainPage = new MasterPage();
+            Application.Current.MainPage = new Login();
 
 
             // Navigation.InsertPageBefore(new MainPage(), this);
