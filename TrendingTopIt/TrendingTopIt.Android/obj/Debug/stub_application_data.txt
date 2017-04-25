@@ -1,2 +1,2 @@
 android.app.Application
-TrendingTopIt.Android
+TrendingTopIt.TrendingTopIt

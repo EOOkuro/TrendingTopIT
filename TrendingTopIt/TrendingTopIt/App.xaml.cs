@@ -12,10 +12,16 @@ namespace TrendingTopIt
         public static bool IsUserLoggedIn;
         public App ()
 		{
-			InitializeComponent();  
+            InitializeComponent();
+           // MainPage = new TabbedPageDemoPage();
 
-			MainPage = new TrendingTopIt.MainPage();
-		}
+             // MainPage = new NavigationPage { BarBackgroundColor = Color.Black, BarTextColor = Color.White };
+
+           //  MainPage.Navigation.PushAsync(new TabbedPageDemoPage());
+              var np = new NavigationPage(new MainPage());
+             MainPage = np;
+            InitializeComponent();
+        }
 
 		protected override void OnStart ()
 		{

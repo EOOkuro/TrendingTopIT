@@ -3,7 +3,10 @@
   <Jars></Jars>
   <ResolvedResourceDirectories>
     <ResolvedResourceDirectory>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\ImageCircle.Forms.Plugin.Android\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\Messier16.Forms.Controls.Droid.PlatformTabbedPage\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\ModernHttpClient\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\xamarin-iconify\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\Xamarin.Forms.Daddoon.Droid.IconTabbedPage\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\Xamarin.Forms.Theme.Android\library_project_imports\res</ResolvedResourceDirectory>
@@ -12,7 +15,10 @@
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\ImageCircle.Forms.Plugin.Android\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Messier16.Forms.Controls.Droid.PlatformTabbedPage\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\ModernHttpClient\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\xamarin-iconify\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.Daddoon.Droid.IconTabbedPage\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.Theme.Android\library_project_imports\assets</ResolvedAssetDirectory>
@@ -22,7 +28,10 @@
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
     <ResolvedResourceDirectoryStamp>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\ImageCircle.Forms.Plugin.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\Messier16.Forms.Controls.Droid.PlatformTabbedPage.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\ModernHttpClient.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\xamarin-iconify.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\Xamarin.Forms.Daddoon.Droid.IconTabbedPage.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\__library_projects__\Xamarin.Forms.Theme.Android.stamp</ResolvedResourceDirectoryStamp>

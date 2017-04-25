@@ -11,10 +11,11 @@ namespace TrendingTopIt
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TestPage1 : ContentPage
-	{
+    {
 		public TestPage1 ()
 		{
 			InitializeComponent ();
-		}
+            
+        }
 	}
 }

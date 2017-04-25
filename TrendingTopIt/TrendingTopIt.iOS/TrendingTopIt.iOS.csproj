@@ -8,9 +8,9 @@
     <ProjectGuid>{EB312094-4AC8-4793-BF86-975FD5BEB034}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TrendingTopIt.iOS</RootNamespace>
+    <RootNamespace>TrendingTopIt</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>TrendingTopIt.iOS</AssemblyName>
+    <AssemblyName>TrendingTopIt</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -48,8 +48,10 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchDebug>true</MtouchDebug>
+    <MtouchDebug>True</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebugOverWiFi>False</IOSDebugOverWiFi>
+    <IOSDebuggerPort>10000</IOSDebuggerPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -90,12 +92,47 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <None Include="Content\Fonts\fontawesome-webfont.eot" />
+    <None Include="Content\Fonts\fontawesome-webfont.svg" />
+    <None Include="Content\Fonts\fontawesome-webfont.ttf" />
+    <None Include="Content\Fonts\fontawesome-webfont.woff" />
+    <None Include="Content\Fonts\fontawesome-webfont.woff2" />
+    <None Include="Content\Fonts\FontAwesome.otf" />
+    <None Include="Content\Less\FontAwesome\animated.less" />
+    <None Include="Content\Less\FontAwesome\bordered-pulled.less" />
+    <None Include="Content\Less\FontAwesome\core.less" />
+    <None Include="Content\Less\FontAwesome\fixed-width.less" />
+    <None Include="Content\Less\FontAwesome\font-awesome.less" />
+    <None Include="Content\Less\FontAwesome\icons.less" />
+    <None Include="Content\Less\FontAwesome\larger.less" />
+    <None Include="Content\Less\FontAwesome\list.less" />
+    <None Include="Content\Less\FontAwesome\mixins.less" />
+    <None Include="Content\Less\FontAwesome\path.less" />
+    <None Include="Content\Less\FontAwesome\rotated-flipped.less" />
+    <None Include="Content\Less\FontAwesome\stacked.less" />
+    <None Include="Content\Less\FontAwesome\variables.less" />
+    <None Include="Content\Scss\FontAwesome\font-awesome.scss" />
+    <None Include="Content\Scss\FontAwesome\_animated.scss" />
+    <None Include="Content\Scss\FontAwesome\_bordered-pulled.scss" />
+    <None Include="Content\Scss\FontAwesome\_core.scss" />
+    <None Include="Content\Scss\FontAwesome\_fixed-width.scss" />
+    <None Include="Content\Scss\FontAwesome\_icons.scss" />
+    <None Include="Content\Scss\FontAwesome\_larger.scss" />
+    <None Include="Content\Scss\FontAwesome\_list.scss" />
+    <None Include="Content\Scss\FontAwesome\_mixins.scss" />
+    <None Include="Content\Scss\FontAwesome\_path.scss" />
+    <None Include="Content\Scss\FontAwesome\_rotated-flipped.scss" />
+    <None Include="Content\Scss\FontAwesome\_stacked.scss" />
+    <None Include="Content\Scss\FontAwesome\_variables.scss" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork@2x" />
     <None Include="packages.config" />
+    <BundleResource Include="Resources\fontawesome.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -116,11 +153,63 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FontAwesomeIcons, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FontAwesomeIcons.1.0.3\lib\FontAwesomeIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FormsPlugin.Iconize, Version=1.5.0.13, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.FormsPlugin.Iconize.1.5.0.13-beta\lib\Xamarin.iOS10\FormsPlugin.Iconize.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FormsPlugin.Iconize.iOS, Version=1.5.0.13, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.FormsPlugin.Iconize.1.5.0.13-beta\lib\Xamarin.iOS10\FormsPlugin.Iconize.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Messier16.Forms.Controls.iOS.PlatformTabbedPage, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlatformTabbedPage.0.4.0\lib\Xamarin.iOS10\Messier16.Forms.Controls.iOS.PlatformTabbedPage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Messier16.Forms.Controls.PlatformTabbedPage, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlatformTabbedPage.0.4.0\lib\Xamarin.iOS10\Messier16.Forms.Controls.PlatformTabbedPage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Iconize, Version=1.5.0.13, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Iconize.1.5.0.13-beta\lib\Xamarin.iOS10\Plugin.Iconize.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Iconize.FontAwesome.iOS, Version=1.5.0.13, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Iconize.FontAwesome.1.5.0.13-beta\lib\Xamarin.iOS10\Plugin.Iconize.FontAwesome.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Iconize.iOS, Version=1.5.0.13, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Iconize.1.5.0.13-beta\lib\Xamarin.iOS10\Plugin.Iconize.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Iconize.Material.iOS, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Iconize.Material.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.Material.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Iconize.SimpleLineIcons.iOS, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Iconize.SimpleLineIcons.1.0.10\lib\Xamarin.iOS10\Plugin.Iconize.SimpleLineIcons.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
+    <Reference Include="xamarin-iconify-common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\xamarin-iconify-common.1.0.0.0\lib\portable-net45+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10\xamarin-iconify-common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.224\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Daddoon.IconTabbedPage, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms-IconTabbedPage.1.0.4\lib\xamarinios10\Xamarin.Forms.Daddoon.IconTabbedPage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Daddoon.iOS.IconTabbedPage, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms-IconTabbedPage.1.0.4\lib\xamarinios10\Xamarin.Forms.Daddoon.iOS.IconTabbedPage.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -136,6 +225,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\CSS\font-awesome.css" />
+    <Content Include="Content\CSS\font-awesome.min.css" />
   </ItemGroup>
   <Import Project="..\TrendingTopIt\TrendingTopIt.projitems" Label="Shared" Condition="Exists('..\TrendingTopIt\TrendingTopIt.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

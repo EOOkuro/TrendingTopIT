@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TrendingTopIt", "TrendingTopIt\TrendingTopIt\TrendingTopIt.shproj", "{92D322BE-72BA-465F-9C45-C9B6121364CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendingTopIt.Android", "TrendingTopIt\TrendingTopIt.Android\TrendingTopIt.Android.csproj", "{E044E9EE-3B5E-4197-B57D-A760F9596171}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EB312094-4AC8-4793-BF86-975FD5BEB034} = {EB312094-4AC8-4793-BF86-975FD5BEB034}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendingTopIt.iOS", "TrendingTopIt\TrendingTopIt.iOS\TrendingTopIt.iOS.csproj", "{EB312094-4AC8-4793-BF86-975FD5BEB034}"
 EndProject

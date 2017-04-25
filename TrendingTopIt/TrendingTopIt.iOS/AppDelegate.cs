@@ -22,8 +22,12 @@ namespace TrendingTopIt.iOS
 		//
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
-			global::Xamarin.Forms.Forms.Init ();
-          
+            /*Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
+                          .With(new Plugin.Iconize.Fonts.MaterialModule())
+                          .With(new Plugin.Iconize.Fonts.MeteoconsModule())
+                          .With(new Plugin.Iconize.Fonts.TypiconsModule());*/
+            global::Xamarin.Forms.Forms.Init ();
+           // FormsPlugin.Iconize.iOS.IconControls.Init();
             LoadApplication (new TrendingTopIt.App ());
             var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
             x = typeof(Xamarin.Forms.Themes.LightThemeResources);

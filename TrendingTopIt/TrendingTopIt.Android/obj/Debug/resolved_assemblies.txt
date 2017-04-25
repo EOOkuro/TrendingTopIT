@@ -1,11 +1,16 @@
-D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\TrendingTopIt.Android.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\TrendingTopIt.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\ExifLib.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\FormsViewGroup.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\ImageCircle.Forms.Plugin.Abstractions.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\ImageCircle.Forms.Plugin.Android.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Messier16.Forms.Controls.Droid.PlatformTabbedPage.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Messier16.Forms.Controls.PlatformTabbedPage.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\ModernHttpClient.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Newtonsoft.Json.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\OkHttp.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\xamarin-iconify-common.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\xamarin-iconify-fontawesome.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\xamarin-iconify.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Xamarin.Android.Support.Design.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Xamarin.Android.Support.v4.dll
@@ -15,6 +20,8 @@ D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\De
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Xamarin.Android.Support.v7.RecyclerView.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Xamarin.Forms.Daddoon.Droid.IconTabbedPage.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Xamarin.Forms.Daddoon.IconTabbedPage.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Xamarin.Forms.Pages.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.dll
@@ -50,6 +57,7 @@ D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\De
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Net.Http.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Runtime.Serialization.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.ServiceModel.Internals.dll
+D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Linq.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Collections.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
@@ -58,7 +66,6 @@ D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\De
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Linq.Expressions.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Dynamic.Runtime.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Threading.dll
-D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Linq.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Reflection.Extensions.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Diagnostics.Tools.dll
 D:\My Data\Code\Android\TrendingTopIt\TrendingTopIt\TrendingTopIt.Android\obj\Debug\android\assets\System.Text.RegularExpressions.dll

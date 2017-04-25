@@ -18,12 +18,19 @@ namespace TrendingTopIt.Droid
 			ToolbarResource = Resource.Layout.Toolbar; 
 
 			base.OnCreate (bundle);
+        /*    ImageCircle.Forms.Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
+                          .With(new Plugin.Iconize.Fonts.MaterialModule())
+                          .With(new Plugin.Iconize.Fonts.MeteoconsModule())
+                          .With(new Plugin.Iconize.Fonts.TypiconsModule());
+            */
 
-			global::Xamarin.Forms.Forms.Init (this, bundle);
-			LoadApplication (new TrendingTopIt.App ());
+            global::Xamarin.Forms.Forms.Init (this, bundle);
+//FormsPlugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.tabs);
+            LoadApplication (new TrendingTopIt.App ());
             var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
             x = typeof(Xamarin.Forms.Themes.LightThemeResources);
             x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
+            
         }
 	}
 }

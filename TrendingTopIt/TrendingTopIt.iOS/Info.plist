@@ -27,7 +27,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.yourcompany.TrendingTopIt</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon-60@2x.png</string>
@@ -47,5 +47,12 @@
 	<string>LaunchScreen.storyboard</string>
 	<key>CFBundleShortVersionString</key>
 	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>iconize-fontawesome.ttf</string>
+		<string>iconize-material.ttf</string>
+		<string>iconize-meteocons.ttf</string>
+		<string>iconize-typicons.ttf</string>
+	</array>
 </dict>
 </plist>

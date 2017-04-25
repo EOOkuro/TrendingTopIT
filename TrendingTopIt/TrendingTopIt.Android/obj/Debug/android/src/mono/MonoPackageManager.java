@@ -97,15 +97,20 @@ public class MonoPackageManager {
 
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
-		/* We need to ensure that "TrendingTopIt.Android.dll" comes first in this list. */
-		"TrendingTopIt.Android.dll",
+		/* We need to ensure that "TrendingTopIt.dll" comes first in this list. */
+		"TrendingTopIt.dll",
 		"ExifLib.dll",
 		"FormsViewGroup.dll",
 		"ImageCircle.Forms.Plugin.Abstractions.dll",
 		"ImageCircle.Forms.Plugin.Android.dll",
+		"Messier16.Forms.Controls.Droid.PlatformTabbedPage.dll",
+		"Messier16.Forms.Controls.PlatformTabbedPage.dll",
 		"ModernHttpClient.dll",
 		"Newtonsoft.Json.dll",
 		"OkHttp.dll",
+		"xamarin-iconify-common.dll",
+		"xamarin-iconify-fontawesome.dll",
+		"xamarin-iconify.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Design.dll",
 		"Xamarin.Android.Support.v4.dll",
@@ -115,6 +120,8 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.v7.RecyclerView.dll",
 		"Xamarin.Android.Support.Vector.Drawable.dll",
 		"Xamarin.Forms.Core.dll",
+		"Xamarin.Forms.Daddoon.Droid.IconTabbedPage.dll",
+		"Xamarin.Forms.Daddoon.IconTabbedPage.dll",
 		"Xamarin.Forms.Pages.dll",
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",

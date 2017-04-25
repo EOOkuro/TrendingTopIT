@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            
+            Title="TrendingTopIt"
+             Icon="Icon.png"
              x:Class="TrendingTopIt.MasterPage"
              xmlns:controls="clr-namespace:MSCommunity_Xamarin;clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
                   >
 
-    <MasterDetailPage.Master>
+    <MasterDetailPage.Master >
         <ContentPage Title="Menu"
+                     Icon="Icon.png"
                  BackgroundColor="#323232">
 
             <StackLayout Orientation="Vertical">
@@ -17,9 +19,7 @@
              data that you want to have in your menu drawer
         -->
                 <StackLayout BackgroundColor="#323232"
-                     HeightRequest="75"
                              VerticalOptions="CenterAndExpand"
-                             Orientation="Vertical"
                              >
                     <controls:CircleImage Source="Icon.png" HeightRequest="75" 
      WidthRequest="100" 
@@ -29,6 +29,7 @@
                  FontSize="20"
                  VerticalOptions="CenterAndExpand"
                  TextColor="White"
+                            HeightRequest="35"
                  BackgroundColor="#323232"
                  HorizontalOptions="Center"/>
                 </StackLayout>
@@ -52,7 +53,7 @@
                          FontSize="Medium"
                          VerticalOptions="Center"
                          TextColor="White"/>
-                                   <!-- <Image Source="{Binding Icon}"
+                                    <!-- <Image Source="{Binding Icon}"
                          WidthRequest="40"
                          HeightRequest="40"
                          VerticalOptions="Center"
@@ -66,10 +67,11 @@
 
         </ContentPage>
     </MasterDetailPage.Master>
-
     <MasterDetailPage.Detail>
         <NavigationPage>
 
         </NavigationPage>
     </MasterDetailPage.Detail>
+
+
 </MasterDetailPage>

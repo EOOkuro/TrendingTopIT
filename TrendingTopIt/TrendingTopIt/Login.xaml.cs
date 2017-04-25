@@ -28,7 +28,8 @@ namespace TrendingTopIt
             {
                 await Navigation.PopToRootAsync();
             }
-            Application.Current.MainPage = new SignUpPage();
+            //Application.Current.MainPage = new SignUpPage();
+            await Application.Current.MainPage.Navigation.PushAsync(new SignUpPage(), true);
         }
         async void OnLoginButtonClicked(object sender, EventArgs e)
         {
@@ -39,7 +40,8 @@ namespace TrendingTopIt
             {
                 await Navigation.PopToRootAsync();
             }
-            Application.Current.MainPage = new MasterPage();
+              Application.Current.MainPage = new MasterPage();
+          //  await Application.Current.MainPage.Navigation.PushAsync(new MasterPage(), true);
 
 
             // Navigation.InsertPageBefore(new MainPage(), this);

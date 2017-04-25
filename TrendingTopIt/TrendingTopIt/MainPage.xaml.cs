@@ -12,9 +12,9 @@ namespace TrendingTopIt
 		public MainPage()
 		{
 			InitializeComponent();
-            var np = new NavigationPage(this);
+           // var np = new NavigationPage(this);
             
-            Application.Current.MainPage = np;
+           // Application.Current.MainPage = np;
            // new NavigationPage(this);
           //  NavigationPage.SetHasNavigationBar(this, true);
 
@@ -38,7 +38,9 @@ namespace TrendingTopIt
             {
                 await Navigation.PopToRootAsync();
             }
-            Application.Current.MainPage = new SignUpPage();
+            // Application.Current.MainPage = new SignUpPage();
+           // Application.Current.MainPage = new NavigationPage { BarBackgroundColor = Color.Black, BarTextColor = Color.White };
+            await Application.Current.MainPage.Navigation.PushAsync( new SignUpPage(),true);
         }
         async void OnLoginButtonClicked(object sender, EventArgs e)
         {
@@ -49,7 +51,8 @@ namespace TrendingTopIt
             {
                 await Navigation.PopToRootAsync();
             }
-            Application.Current.MainPage = new Login();
+            //Application.Current.MainPage = new Login();
+            await Application.Current.MainPage.Navigation.PushAsync(new Login(), true);
 
 
             // Navigation.InsertPageBefore(new MainPage(), this);
