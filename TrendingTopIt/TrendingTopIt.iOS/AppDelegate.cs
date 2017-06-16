@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
+
 using Foundation;
 using UIKit;
 
@@ -22,6 +23,7 @@ namespace TrendingTopIt.iOS
 		//
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
+		
             /*Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
                           .With(new Plugin.Iconize.Fonts.MaterialModule())
                           .With(new Plugin.Iconize.Fonts.MeteoconsModule())
