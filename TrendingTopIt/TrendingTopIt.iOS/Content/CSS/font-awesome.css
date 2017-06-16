@@ -4,6 +4,7 @@
  */
 /* FONT PATH
  * -------------------------- */
+
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');
@@ -25,6 +26,7 @@
   line-height: 0.75em;
   vertical-align: -15%;
 }
+
 .fa-2x {
   font-size: 2em;
 }
