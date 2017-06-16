@@ -9,10 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendingTopIt.Android", "Tr
 	ProjectSection(ProjectDependencies) = postProject
 		{EB312094-4AC8-4793-BF86-975FD5BEB034} = {EB312094-4AC8-4793-BF86-975FD5BEB034}
 	EndProjectSection
+	
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendingTopIt.iOS", "TrendingTopIt\TrendingTopIt.iOS\TrendingTopIt.iOS.csproj", "{EB312094-4AC8-4793-BF86-975FD5BEB034}"
 EndProject
 Global
+
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		TrendingTopIt\TrendingTopIt\TrendingTopIt.projitems*{92d322be-72ba-465f-9c45-c9b6121364cf}*SharedItemsImports = 13
 		TrendingTopIt\TrendingTopIt\TrendingTopIt.projitems*{e044e9ee-3b5e-4197-b57d-a760f9596171}*SharedItemsImports = 4
