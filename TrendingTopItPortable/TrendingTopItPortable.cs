@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 using Xamarin.Forms;
 
 namespace TrendingTopItPortable
@@ -18,8 +19,10 @@ namespace TrendingTopItPortable
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
             };
 
+
             int clicked = 0;
             button.Clicked += (s, e) => button.Text = "Clicked: " + clicked++;
+
 
             Content = button;
         }
