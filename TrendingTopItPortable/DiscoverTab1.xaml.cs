@@ -11,6 +11,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace TrendingTopItPortable
+    
 {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
