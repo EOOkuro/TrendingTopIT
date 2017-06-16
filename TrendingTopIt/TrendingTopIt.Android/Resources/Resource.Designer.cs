@@ -9,6 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+	
 [assembly: global::Android.Runtime.ResourceDesignerAttribute("TrendingTopIt.Resource", IsApplication=true)]
 
 namespace TrendingTopIt
