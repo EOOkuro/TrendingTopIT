@@ -34,6 +34,7 @@ namespace TrendingTopItPortable
 
         int count;
 
+
         string countDisplay = "You clicked 0 times.";
         public string CountDisplay
         {
