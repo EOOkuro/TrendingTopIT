@@ -1,0 +1,42 @@
+<ion-content padding class="transparent-header">
+    <ion-header>
+        <ion-navbar>
+        </ion-navbar>
+    </ion-header>
+    <img class="logo" src="assets/img/logo/logo.png" />
+    <div padding>
+        <ion-item>
+            <ion-input type="text" placeholder="Username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="password" placeholder="Password"></ion-input>
+        </ion-item>
+        <button ion-button block outline (click)="login()" color="light" class="login-button">Login</button>
+        <button ion-button block text-center clear (click)="login()" color="light" class="forgot-button">Forgot Password?</button>
+    </div>
+    <div class="strike">
+        <span>OR Login with</span>
+    </div>
+    <div class="row" test>
+        <div class="col" text-center>
+            <button ion-button clear left (click)="login()" color="light" class="login-button"><ion-icon name="logo-facebook"></ion-icon> </button>
+
+        </div>
+        <div class="col" text-center>
+            <button ion-button clear center (click)="login()" color="light" class="login-button"><ion-icon name="logo-twitter"></ion-icon> </button>
+
+        </div>
+        <div class="col" text-center>
+            <button ion-button clear right (click)="login()" color="light" class="login-button"><ion-icon name="logo-google"></ion-icon> </button>
+
+        </div>
+
+    </div>
+</ion-content>
+<ion-footer>
+    <ion-toolbar class="footer">
+        <div (click)="goToSignup()">
+            <span>Don't have an account? <strong>Sign up here</strong>.</span>
+        </div>
+    </ion-toolbar>
+</ion-footer>
