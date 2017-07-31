@@ -6,7 +6,18 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {Facebook} from '@ionic-native/facebook';
+import firebase from 'firebase';
 
+export const firebaseConfig={
+  apiKey: "AIzaSyCPh7XxXvd-I7IavnYanc9rGxpqZYU-Cig",
+    authDomain: "trendingtopit-cb54b.firebaseapp.com",
+    databaseURL: "https://trendingtopit-cb54b.firebaseio.com",
+    projectId: "trendingtopit-cb54b",
+    storageBucket: "trendingtopit-cb54b.appspot.com",
+    messagingSenderId: "1063971484486"
+}
+  firebase.initializeApp(firebaseConfig);
 @NgModule({
   declarations: [
     MyApp
@@ -22,6 +33,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

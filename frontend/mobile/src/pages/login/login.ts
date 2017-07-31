@@ -3,13 +3,8 @@ import { Component } from '@angular/core';
 
 
 import { AlertController, App, LoadingController,IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LoginPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import {Facebook} from '@ionic-native/facebook';
+import firebase from 'firebase';
 
 @IonicPage()
 @Component({
@@ -23,12 +18,26 @@ public loginForm: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
-    public app: App) {
+    public app: App,public facebook:Facebook) {
   }
 
   login() {
    
 this.navCtrl.setRoot('HomePage');
+  }
+ facebookLogin() {
+  this.facebook.login(['email']).then(res=>{
+const facebookCredentials=firebase.auth.FacebookAuthProvider.credential(res.authResponse.accessToken);
+firebase.auth().signInWithCredential(facebookCredentials).then(firebaseSuccess=>{
+this.navCtrl.setRoot('HomePage');
+}).catch(firebaseError=>{
+  alert("Error with credentials is "+JSON.stringify(firebaseError));
+})
+  }).catch(err=>{
+alert("Error is "+JSON.stringify(err));
+  }); 
+
+
   }
 
   goToSignup() {
