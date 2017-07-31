@@ -1,18 +1,51 @@
-<!--
-  Generated template for the SignupPage page.
+<ion-content padding class="transparent-header">
+    <ion-header>
+        <ion-navbar>
+        </ion-navbar>
+    </ion-header>
+    <img class="logo" src="assets/img/logo/logo.png" />
+    <div class="login-box">
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+        <form #registerForm="ngForm">
+            <ion-row>
+                <ion-col>
+                    <ion-list inset>
 
-  <ion-navbar>
-    <ion-title>signup</ion-title>
-  </ion-navbar>
+                        <ion-item>
+                            <ion-input type="text" placeholder="Email" name="email" required></ion-input>
+                        </ion-item>
 
-</ion-header>
+                        <ion-item>
+                            <ion-input type="password" placeholder="Username" name="password" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input type="password" placeholder="Password" name="password" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input type="password" placeholder="Confirm Password" name="password" required></ion-input>
+                        </ion-item>
+                        <div text-right>
+
+                            <ion-checkbox checked="false"></ion-checkbox>
+                            show password
+                        </div>
+                    </ion-list>
+                    <div text-left padding>
+
+                        <ion-checkbox checked="false"></ion-checkbox>
+                        I agree to the <u>Terms of Use</u>
+                    </div>
 
 
-<ion-content padding>
+                </ion-col>
+            </ion-row>
 
+            <ion-row>
+                <ion-col class="signup-col">
+                    <button (click)="register()" ion-button class="submit-btn" full type="submit">Sign Up</button>
+                </ion-col>
+            </ion-row>
+
+        </form>
+    </div>
 </ion-content>

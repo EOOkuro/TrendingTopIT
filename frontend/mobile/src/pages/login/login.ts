@@ -1,4 +1,7 @@
+
 import { Component } from '@angular/core';
+
+
 import { AlertController, App, LoadingController,IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -24,25 +27,12 @@ public loginForm: any;
   }
 
   login() {
-    const loading = this.loadingCtrl.create({
-      duration: 500
-    });
-
-    loading.onDidDismiss(() => {
-      const alert = this.alertCtrl.create({
-        title: 'Logged in!',
-        subTitle: 'Thanks for logging in.',
-        buttons: ['Dismiss']
-      });
-      alert.present();
-    });
-
-    loading.present();
-
+   
+this.navCtrl.setRoot('HomePage');
   }
 
   goToSignup() {
-    // this.navCtrl.push(SignupPage);
+    this.navCtrl.push('SignupPage');
   }
 
 }
