@@ -7,6 +7,7 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {Facebook} from '@ionic-native/facebook';
+import { GooglePlus } from '@ionic-native/google-plus';
 import firebase from 'firebase';
 
 export const firebaseConfig={
@@ -34,6 +35,7 @@ export const firebaseConfig={
     StatusBar,
     SplashScreen,
     Facebook,
+    GooglePlus,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
