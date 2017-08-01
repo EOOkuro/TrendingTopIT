@@ -10,6 +10,7 @@ import {Facebook} from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 import firebase from 'firebase';
 import { TwitterConnect } from '@ionic-native/twitter-connect';
+import {AngularFireModule} from 'angularfire2';
 
 export const firebaseConfig={
   apiKey: "AIzaSyCPh7XxXvd-I7IavnYanc9rGxpqZYU-Cig",
@@ -27,6 +28,7 @@ export const firebaseConfig={
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +39,7 @@ export const firebaseConfig={
     SplashScreen,
     Facebook,
     GooglePlus,
-    TwitterConnect,
+    TwitterConnect,    
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

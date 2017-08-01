@@ -1,3 +1,4 @@
-# TrendingTop
+# TrendingTopIt
 
-Download Visual Studio 
+Frontend folder for Mobile app
+Backend folder for asp net

@@ -24,3 +24,4 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+Apparently, twitter login works only if user has twitter app installed.

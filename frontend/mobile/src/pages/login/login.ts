@@ -1,3 +1,4 @@
+import { User } from './../../models/user';
 
 import { Component } from '@angular/core';
 
@@ -14,7 +15,7 @@ import { TwitterConnect } from '@ionic-native/twitter-connect';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-
+user={} as User;
 public loginForm: any;
   public backgroundImage = 'assets/img/background/background-5.jpg';
  userProfile:any=null;
