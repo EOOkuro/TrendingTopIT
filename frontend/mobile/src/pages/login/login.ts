@@ -6,6 +6,7 @@ import { AlertController, App, LoadingController,IonicPage, NavController, NavPa
 import {Facebook} from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 import firebase from 'firebase';
+import { TwitterConnect } from '@ionic-native/twitter-connect';
 
 @IonicPage()
 @Component({
@@ -19,7 +20,7 @@ public loginForm: any;
  userProfile:any=null;
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
-    public app: App,public facebook:Facebook,private googlePlus: GooglePlus) {
+    public app: App,public facebook:Facebook,private googlePlus: GooglePlus,private twitter:TwitterConnect) {
        firebase.auth().onAuthStateChanged( user => {
     if (user){
       this.userProfile = user;
@@ -66,6 +67,24 @@ this.googlePlus.login({
     }).catch(err => console.error("Error: ", + err));
     
 }
+
+twitterLogin() {
+  this.twitter.login().then( response => {
+    console.log(response);
+    const twitterCredential = firebase.auth.TwitterAuthProvider
+        .credential(response.token, response.secret);
+
+    firebase.auth().signInWithCredential(twitterCredential)
+    .then( success => {
+        console.log("Firebase success: " + JSON.stringify(success));
+        this.navCtrl.setRoot('HomePage');
+      })
+      .catch( error => console.log("Firebase failure: " + JSON.stringify(error)));
+  }, error => {
+    console.log("Error connecting to twitter: ", error);
+  });
+}
+
   goToSignup() {
     this.navCtrl.push('SignupPage');
   }

@@ -9,6 +9,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {Facebook} from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 import firebase from 'firebase';
+import { TwitterConnect } from '@ionic-native/twitter-connect';
 
 export const firebaseConfig={
   apiKey: "AIzaSyCPh7XxXvd-I7IavnYanc9rGxpqZYU-Cig",
@@ -36,6 +37,7 @@ export const firebaseConfig={
     SplashScreen,
     Facebook,
     GooglePlus,
+    TwitterConnect,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
