@@ -1,9 +1,9 @@
 <ion-menu [content]="content">
-  <ion-header >
+  <!--<ion-header >
     <ion-toolbar>
       <ion-title class="listTitle" >Menu</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header>-->
 
   <ion-content >
     <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}"></div>
@@ -37,15 +37,15 @@
    
 
   </div>
-    <ion-list style="margin-top:-20%;">
+    <ion-list style="margin-top:-23%;" >
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
          <ion-row>
-            <ion-col col-10>
+            <ion-col col-11>
            {{p.title}}
             </ion-col>
-         <ion-col col-2 >
+         <ion-col col-1 >
            
-       <ion-icon name="play" style="opacity: 0.5;"></ion-icon>
+       <ion-icon name="play" style="opacity: 0.2;"></ion-icon>
          </ion-col>
          </ion-row>
       </button>
