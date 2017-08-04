@@ -34,7 +34,6 @@ public loginForm: any;
   }
 
   login() {
-   
 this.navCtrl.setRoot('HomePage');
   }
  facebookLogin() {

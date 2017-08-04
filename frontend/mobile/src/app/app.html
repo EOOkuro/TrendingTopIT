@@ -6,9 +6,36 @@
   </ion-header>
 
   <ion-content>
+    <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}"></div>
+  <div id="content">
+    <div id="profile-info" padding>
+      <img id="profile-image" [src]="user.profileImage">
+      <h3 id="profile-name">{{user.name}}</h3>
+      <p>{{user.occupation}} &bull; {{user.location}}</p>
+      <p class="profile-description">{{user.description}}</p>
+ 
+    </div>
+    
+    <hr/>
+    <ion-row class="profile-numbers">
+      <ion-col col-4>
+        <p>Followers</p>
+        <span>{{user.followers}}</span>
+      </ion-col>
+      <ion-col col-4>
+        <p>Following</p>
+        <span>{{user.following}}</span>
+      </ion-col>
+      <ion-col col-4>
+        <p>Posts</p>
+        <span>{{user.posts}}</span>
+      </ion-col>
+    </ion-row>
+
+  </div>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+        {{p.title}} 
       </button>
     </ion-list>
   </ion-content>
