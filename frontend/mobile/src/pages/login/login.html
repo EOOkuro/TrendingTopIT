@@ -6,12 +6,16 @@
     <img class="logo" src="assets/img/logo/logo.png" />
     <div padding>
         <ion-item>
-            <ion-input type="text" placeholder="Username" [(ngModel)]="user.email"></ion-input>
+        
+            <ion-input type="text"  [(ngModel)]="user.email"></ion-input>
+            <ion-icon name="ios-eye-outline" item-right></ion-icon>
         </ion-item>
         <ion-item>
+            
             <ion-input type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+            <ion-icon name="ios-eye-outline" item-right></ion-icon>
         </ion-item>
-        <button ion-button block outline (click)="login()" color="light" class="login-button">Login</button>
+        <button ion-button block outline (click)="login()"  color="light" class="login-button"><p class="text">Login</p></button>
         <button ion-button block text-center clear (click)="login()" color="light" class="forgot-button">Forgot Password?</button>
     </div>
     <div class="strike">
@@ -19,7 +23,7 @@
     </div>
     <div class="row" test>
         <div class="col" text-center>
-            <button ion-button clear left (click)="facebookLogin()" color="light" class="login-button"><ion-icon name="logo-facebook"></ion-icon> </button>
+            <button ion-button clear left (click)="facebookLogin()"  color="light" class="login-button"><ion-icon name="logo-facebook"></ion-icon> </button>
 
         </div>
         <div class="col" text-center>
