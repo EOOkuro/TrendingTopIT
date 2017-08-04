@@ -26,7 +26,9 @@ export class MyApp {
     this.initializeApp();
  this.pages = [
       { title: 'My Profile', component: 'MyProfile', active: true, icon: 'home' },
-      { title: 'My Profile2', component: 'MyProfile', active: true, icon: 'home' },
+      { title: 'Discover', component: 'MyProfile', active: true, icon: 'home' },
+        { title: 'Friends', component: 'MyProfile', active: true, icon: 'home' },
+          { title: 'Timeline', component: 'MyProfile', active: true, icon: 'home' },
       
  ];
   this.activePage.subscribe((selectedPage: any) => {
