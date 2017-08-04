@@ -11,34 +11,51 @@
     <div id="profile-info" padding>
       <img id="profile-image" [src]="user.profileImage">
       <h3 id="profile-name">{{user.name}}</h3>
+
+       <ion-row class="profile-numbers">
+      <ion-col col-4 style="margin-left:25%;">
+        <p> Comments <ion-icon name="chatbubbles"></ion-icon></p>
+        <!--<span>{{user.followers}}</span>-->
+      </ion-col>
+      <ion-col col-2>
+        <p>Likes   <ion-icon name="heart"></ion-icon></p>
+        <!--<span>{{user.following}}</span>-->
+      </ion-col>
+      <!--<ion-col col-4>
+        <p>Posts</p>
+        <span>{{user.posts}}</span>
+      </ion-col>-->
+    </ion-row>
+
+<!--
       <p>{{user.occupation}} &bull; {{user.location}}</p>
       <p class="profile-description">{{user.description}}</p>
- 
+ -->
     </div>
     
     <hr/>
-    <ion-row class="profile-numbers">
-      <ion-col col-4>
-        <p>Followers</p>
-        <span>{{user.followers}}</span>
-      </ion-col>
-      <ion-col col-4>
-        <p>Following</p>
-        <span>{{user.following}}</span>
-      </ion-col>
-      <ion-col col-4>
-        <p>Posts</p>
-        <span>{{user.posts}}</span>
-      </ion-col>
-    </ion-row>
+   
 
   </div>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}} 
+         <ion-row>
+            <ion-col col-6>
+           {{p.title}}
+            </ion-col>
+         <ion-col col-2 >
+      <ion-icon name="arrow-forward"></ion-icon>
+         </ion-col>
+         </ion-row>
       </button>
     </ion-list>
   </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
 
 </ion-menu>
 
