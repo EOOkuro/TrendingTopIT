@@ -213,3 +213,45 @@
         color: #777;
     }
 }
+
+page-app {
+
+
+ion-header{
+
+background: red;
+color: red;
+
+}
+
+$red: red;
+
+.custom, .title, .title-md, .toolbar, .toolbar-content, .header, .header-md, .toolbar-md{
+color: white;
+}
+
+.toolbar-background, .header{
+  background-color: black;
+  color: white;
+}
+
+.toolbar .toolbar-title, .toolbar .bar-button-default {
+  color: white;
+}
+
+#ion-header{
+color: white;
+
+}
+
+.listTitle
+{
+    // background-color : #58B43F;
+    color : #ffffff !important;
+    // box-shadow : 0px 6px 10px #888888;
+    font-style: normal;
+    text-decoration-style: none;
+}
+
+
+}
