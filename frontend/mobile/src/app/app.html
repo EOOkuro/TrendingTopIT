@@ -5,7 +5,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <ion-content >
     <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}"></div>
   <div id="content">
     <div id="profile-info" padding>
@@ -37,14 +37,15 @@
    
 
   </div>
-    <ion-list>
+    <ion-list style="margin-top:-20%;">
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
          <ion-row>
             <ion-col col-10>
            {{p.title}}
             </ion-col>
          <ion-col col-2 >
-      <ion-icon name="arrow-forward"></ion-icon>
+           
+       <ion-icon name="play" style="opacity: 0.5;"></ion-icon>
          </ion-col>
          </ion-row>
       </button>
