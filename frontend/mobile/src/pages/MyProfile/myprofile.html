@@ -1,0 +1,42 @@
+<ion-content padding style="background: black;" class=" transparent-header" padding >
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>My Profile </ion-title>
+    </ion-navbar>
+</ion-header>
+<div id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}"></div>
+  <div id="content" style="background: black;" >
+    <div id="profile-info" style="" >
+      <img id="profile-image" [src]="user.profileImage">
+      <h3 id="profile-name" style="color: white;">{{user.name}}</h3>
+      <p>{{user.occupation}} &bull; {{user.location}}</p>
+     
+     
+     <ion-list  style=" margin-top: 0%; width: 130%; margin-left: -15%" >
+       
+
+      <button id="ion-list" menuClose ion-item *ngFor="let p of pagez" >
+         <ion-row >
+            <ion-col  >
+          <h2 style="text-align: center; color: white; margin-left:10%;"> {{p.title}} .. </h2>
+            </ion-col>
+         <ion-col col-1 >
+           
+       <!--<ion-icon name="play" style="opacity: 0.2;"></ion-icon>-->
+         </ion-col>
+         </ion-row>
+      </button>
+   
+    </ion-list>
+      
+    </div>
+    
+    <hr/>
+    
+  </div>
+
+    <!--<button ion-button secondary (click)="tohome()">Logout</button>-->
+</ion-content>

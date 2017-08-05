@@ -33,7 +33,15 @@ page-login {
     ion-content {
         background: linear-gradient(316deg, #002400, #881d1d, #88b71d, #88e81d, #88e840, #88dde8, #881de8, #8800f3, #8800f3);
         background-size: 1800% 1800%;
-        animation: rainbow 30s linear infinite;
+        animation: rainbow 60s linear infinite;
+    }
+
+    .text{
+  
+   color: lightslategray;
+        background-size: 1800% 1800%;
+        animation: rainbow 60s linear infinite;
+
     }
     @keyframes rainbow {
         0% {
@@ -79,6 +87,9 @@ page-login {
     .login-button {
         text-transform: none;
         border-radius: 3px !important;
+        background:white;
+        color:grey;
+  
     }
     // Facebook icon
     ion-icon {

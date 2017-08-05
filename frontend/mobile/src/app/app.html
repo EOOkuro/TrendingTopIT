@@ -1,17 +1,62 @@
 <ion-menu [content]="content">
-  <ion-header>
+  <!--<ion-header >
     <ion-toolbar>
-      <ion-title>Menu</ion-title>
+      <ion-title class="listTitle" >Menu</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header>-->
 
-  <ion-content>
-    <ion-list>
+  <ion-content >
+    <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}"></div>
+  <div id="content">
+    <div id="profile-info" padding>
+      <img id="profile-image" [src]="user.profileImage">
+      <h3 id="profile-name">{{user.name}}</h3>
+
+       <ion-row class="profile-numbers">
+      <ion-col col-4 style="margin-left:23%;">
+        <p> Comments <ion-icon name="chatbubbles"></ion-icon></p>
+        <!--<span>{{user.followers}}</span>-->
+      </ion-col>
+      <ion-col col-2>
+        <p>Likes   <ion-icon name="heart"></ion-icon></p>
+        <!--<span>{{user.following}}</span>-->
+      </ion-col>
+      <!--<ion-col col-4>
+        <p>Posts</p>
+        <span>{{user.posts}}</span>
+      </ion-col>-->
+    </ion-row>
+
+<!--
+      <p>{{user.occupation}} &bull; {{user.location}}</p>
+      <p class="profile-description">{{user.description}}</p>
+ -->
+    </div>
+    
+    <hr/>
+   
+
+  </div>
+    <ion-list style="margin-top:-23%;" >
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+         <ion-row>
+            <ion-col col-11>
+           {{p.title}}
+            </ion-col>
+         <ion-col col-1 >
+           
+       <ion-icon name="play" style="opacity: 0.2;"></ion-icon>
+         </ion-col>
+         </ion-row>
       </button>
     </ion-list>
   </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> <ion-icon menuClose name="power" (click)="tohome()"></ion-icon></ion-title>
+  </ion-toolbar>
+</ion-footer>
 
 </ion-menu>
 
