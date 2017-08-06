@@ -7,13 +7,78 @@
         <ion-title>Home</ion-title>
     </ion-navbar>
 </ion-header>
-<div id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}"></div>
+ <div  id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}"  style="background-size: cover; height: 40%;"></div> 
+ <!-- <div  id="profile-bg" style="background:rgba(0,0,0,0.7); background-size: 100% 400px; height: 40%;"></div> -->
   <div id="content">
-    <div id="profile-info" padding>
-      <img id="profile-image" [src]="user.profileImage">
-      <h3 id="profile-name">{{user.name}}</h3>
-      <p>{{user.occupation}} &bull; {{user.location}}</p>
-      <p class="profile-description">{{user.description}}</p>
+    <div id="profile-info" >
+
+
+
+      <!-- <img id="profile-image" [src]="user.profileImage"> -->
+      <h3 id="profile-name" style="color: white;">Welcome</h3>
+      <p class="profile-description" style="color: white;">{{user.description}}</p>
+      <!-- <h3 id="profile-name">{{user.name}}</h3>       -->
+      <ion-row>
+
+      <ion-col col-6>
+     
+       <button ion-button style="width: 100%; background: gray; " >Create my #Trend</button>
+
+      </ion-col>
+
+       <ion-col col-6>
+
+        <button ion-button style="width: 100%; background:lightgray;" color="light">How it works</button>
+
+      </ion-col>
+
+
+      </ion-row>
+
+<ion-row style="background:black; width:120%; margin-left:-10%;  line-height: 300%;">
+
+<ion-col col-6 style="color: black;  background:lightgray; ">Discover</ion-col>
+<ion-col col-6 style="color: white; background: gray;">Top Trends</ion-col>
+
+
+</ion-row>
+      <!-- <p>{{user.occupation}} &bull; {{user.location}}</p> -->
+
+<ion-row style="background: black; width:120%; margin-left:-10%;">
+
+
+  <ion-row style="width: 100%; background: black;">
+<ion-col col-4>
+
+<img id="profile-image"  style="width:50px; margin-top:2%; height: 50px; display: flex;
+  flex-direction: column; " [src]="user.profileImage">
+</ion-col>
+
+<ion-col col-4 style=" color: white; margin-left:-10%; margin-top:2%; ">
+<ion-row>Crossing The Mara</ion-row> 
+<ion-row><ion-icon name="pin"></ion-icon> &nbsp;  Lagos</ion-row>
+</ion-col>
+
+<ion-col col-4 style=" margin-left:10%;  " >
+
+<ion-icon style=" font-size:250%; color: white;" name="heart"></ion-icon>  <p style="color: white; margin-top:-2%;">like</p>
+</ion-col>
+
+
+  </ion-row>
+
+
+
+
+</ion-row>
+
+ <div  style="background-size:cover; width:120%; margin-left: -10%;  height: 200px; ">
+   
+  <img [src]="user.coverImage" style="width:100%; height: 50%;">
+  <h2 style="margin-top:-20%; color: white; text-shadow: 2px 2px black ;">#trending </h2>
+
+</div> 
+
    </div>
     
     <hr/>
@@ -21,5 +86,10 @@
 
   </div>
 
-    <button ion-button secondary (click)="logout()">Logout</button>
+ 
+<button ion-button secondary (click)="logout()">Logout</button>
+
+
+    
 </ion-content>
+
