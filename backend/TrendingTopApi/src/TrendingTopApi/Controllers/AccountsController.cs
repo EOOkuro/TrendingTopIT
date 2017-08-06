@@ -13,6 +13,7 @@ using TrendingTopApi.objectFolder;
 
 namespace AccountsController.Controllers
 {
+
     [Route("api/[controller]")]
     public class AccountsController : Controller
     {
@@ -21,40 +22,69 @@ namespace AccountsController.Controllers
         [HttpGet]
         public JsonResult GetUser(string userId,string pass)
         {
-            client = new MongoClient();
-            RegData validRegRec = new RegData();
-            profileRecord validProfile = new profileRecord();
+        //public RegData baseRecords { get; set; }
+        //public ProfileRecord profile { get; set; }
+        //public Posts[] postList { get; set; }
+        //public Friend[] friendList { get; set; }
+        //public Gallery[] galleryList { get; set; }
+
+        client = new MongoClient();
+            BaseData baseRec = new BaseData();
+            ProfileRecord validProfile = new ProfileRecord();
             var db = client.GetDatabase(dbSet.DB_NAME);
-            var col = db.GetCollection<userRecord>("userDetails");
+            var col = db.GetCollection<UserRecord>("userDetails");
             var holder =  col.Find(x => x.baseRecords.userName == userId).FirstOrDefault();
             if (holder != null)
             {
-                validRegRec = new RegData()
+                Posts[] postList = null;
+                pass = Util.getHash(pass, holder.regRecords.passSalt);
+                if (pass == holder.regRecords.password)
                 {
-                    emailAddress = holder.baseRecords.emailAddress,
-                   // passSalt = holder.baseRecords.passSalt,
-                    userName = holder.baseRecords.userName,
-                   // password = holder.baseRecords.password,
-                };
-                if (holder.profile != null)
-                {
-                    validProfile = new profileRecord()
+                    if (holder.baseRecords != null)
                     {
-                        gender = holder.profile.gender,
-                        age = holder.profile.age,
-                        height = holder.profile.height,
-                        weight = holder.profile.weight,
-                        country = holder.profile.country
-                    };
-                }
-                pass = Util.getHash(pass, holder.baseRecords.passSalt);
-                if (pass == holder.baseRecords.password)
-                {
-                    return new JsonResult(new userRecord {
+                        baseRec = new BaseData()
+                        {
+                            emailAddress = holder.baseRecords.emailAddress,
+                            userName = holder.baseRecords.userName,
+                            dateRegistred = holder.baseRecords.dateRegistred,
+                        };
+                    }
+                    if (holder.profile != null)
+                    {
+                        validProfile = new ProfileRecord()
+                        {
+                            gender = holder.profile.gender,
+                            age = holder.profile.age,
+                            height = holder.profile.height,
+                            weight = holder.profile.weight,
+                            country = holder.profile.country
+                        };
+                    }
+                    if (holder.postList != null)
+                    {
+                        var x = 0;
+                        postList = new Posts[holder.postList.Length];
+                        while (x < holder.postList.Length)
+                        {
+                            var postdetails =
+                                new Posts()
+                                {
+                                    _id = holder.postList[x]._id,
+                                    postText = holder.postList[x].postText,
+                                    postDate = holder.postList[x].postDate,
+                                    medias = 
+                                        statsData
+                                    };
+                            details[x] = detail;
+                            x++;
+                        }
+                    }
+                    return new JsonResult(new UserRecord
+                    {
 
                         _id = holder._id,
-                        baseRecords = validRegRec,
-                       
+                        baseRecords = baseRec,
+
                     });
                 }
                 else
@@ -142,7 +172,7 @@ namespace AccountsController.Controllers
             client = new MongoClient();
             var db = client.GetDatabase(dbSet.DB_NAME);
             db.DropCollection("userDetails");
-            var col = db.GetCollection<userRecord>("userDetails");
+            var col = db.GetCollection<UserRecord>("userDetails");
             #endregion
             
             #region check if user name or email exist
@@ -178,7 +208,7 @@ namespace AccountsController.Controllers
             #endregion
             
             string salt = Util.getSalt();
-            var newReg = new userRecord
+            var newReg = new UserRecord
             {
                 _id = Guid.NewGuid(),
                 baseRecords = new RegData
@@ -200,15 +230,17 @@ namespace AccountsController.Controllers
         }
 
         [HttpPut]
-        public returnMSG UpdateUser(profileRecord profile,string Userid)
+        public returnMSG UpdateUser(ProfileRecord profileVal,string Userid)
         {
             client = new MongoClient();
             RegData validRegRec = new RegData();
-            profileRecord validProfile = new profileRecord();
+            ProfileRecord validProfile = new ProfileRecord();
             var db = client.GetDatabase(dbSet.DB_NAME);
-            var col = db.GetCollection<userRecord>("userDetails");
+            var col = db.GetCollection<UserRecord>("userDetails");
             var msg = new returnMSG();
-            var holder = col.Find(x => x._id == Userid).FirstOrDefault();
+            var filter = Builders<UserRecord>.Filter.Eq(x => x._id, Userid);
+            var update = col.UpdateOne(filter, Builders<UserRecord>.Update.Set(x => x.profile, profileVal));
+            //var holder = col.Find(x => x.baseRecords.userName == userId).FirstOrDefault();
 
 
 
