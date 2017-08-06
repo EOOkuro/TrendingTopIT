@@ -22,24 +22,22 @@ namespace AccountsController.Controllers
         [HttpGet]
         public JsonResult GetUser(string userId,string pass)
         {
-        //public RegData baseRecords { get; set; }
-        //public ProfileRecord profile { get; set; }
-        //public Posts[] postList { get; set; }
-        //public Friend[] friendList { get; set; }
-        //public Gallery[] galleryList { get; set; }
-
-        client = new MongoClient();
-            BaseData baseRec = new BaseData();
-            ProfileRecord validProfile = new ProfileRecord();
+            client = new MongoClient();
             var db = client.GetDatabase(dbSet.DB_NAME);
             var col = db.GetCollection<UserRecord>("userDetails");
             var holder =  col.Find(x => x.baseRecords.userName == userId).FirstOrDefault();
             if (holder != null)
             {
-                Posts[] postList = null;
+                BaseData baseRec = new BaseData();
+                ProfileRecord validProfile = new ProfileRecord();
+                Posts[] postRecords = null;
+                Friend[] friends = null;
+                Gallery[] galleryItems = null;
                 pass = Util.getHash(pass, holder.regRecords.passSalt);
                 if (pass == holder.regRecords.password)
                 {
+
+                    #region get base records
                     if (holder.baseRecords != null)
                     {
                         baseRec = new BaseData()
@@ -49,6 +47,9 @@ namespace AccountsController.Controllers
                             dateRegistred = holder.baseRecords.dateRegistred,
                         };
                     }
+                    #endregion
+
+                    #region get profile records
                     if (holder.profile != null)
                     {
                         validProfile = new ProfileRecord()
@@ -60,10 +61,13 @@ namespace AccountsController.Controllers
                             country = holder.profile.country
                         };
                     }
+                    #endregion
+
+                    #region get all post
                     if (holder.postList != null)
                     {
                         var x = 0;
-                        postList = new Posts[holder.postList.Length];
+                        postRecords = new Posts[holder.postList.Length];
                         while (x < holder.postList.Length)
                         {
                             var postdetails =
@@ -72,20 +76,65 @@ namespace AccountsController.Controllers
                                     _id = holder.postList[x]._id,
                                     postText = holder.postList[x].postText,
                                     postDate = holder.postList[x].postDate,
-                                    medias = 
-                                        statsData
+                                    medias = holder.postList[x].medias,
+                                    statsData = holder.postList[x].statsData,
                                     };
-                            details[x] = detail;
+                            postRecords[x] = postdetails;
                             x++;
                         }
                     }
+                    #endregion
+
+                    #region get all friends
+                    if (holder.friendList != null)
+                    {
+                        var x = 0;
+                        friends = new Friend[holder.friendList.Length];
+                        while (x < holder.friendList.Length)
+                        {
+                            var friendDetails =
+                                new Friend()
+                                {
+                                    _id = holder.friendList[x]._id,
+                                };
+                            friends[x] = friendDetails;
+                            x++;
+                        }
+                    }
+                    #endregion
+
+                    #region get gallery items
+                    if (holder.galleryList != null)
+                    {
+                        var x = 0;
+                        galleryItems = new Gallery[holder.galleryList.Length];
+                        while (x < holder.galleryList.Length)
+                        {
+                            var galleryDetails =
+                                new Gallery()
+                                {
+                                    _id = holder.galleryList[x]._id,
+                                    statsData = holder.galleryList[x].statsData
+                                };
+                            galleryItems[x] = galleryDetails;
+                            x++;
+                        }
+                    }
+                    #endregion
+
+                    #region populate and send return value
                     return new JsonResult(new UserRecord
                     {
 
                         _id = holder._id,
                         baseRecords = baseRec,
-
+                        profile = validProfile,
+                        postList = postRecords,
+                        friendList = friends,
+                        galleryList = galleryItems
                     });
+                    #endregion
+
                 }
                 else
                 {
@@ -104,40 +153,6 @@ namespace AccountsController.Controllers
                     value = false,
                 });
             }
-
-            /* var holder = col.Find(new BsonDocument()).ToList();
-               json = new RegData[holder.Count];
-               var x = 0;
-               if (holder.Count> 0)
-               {
-                   while (x < holder.Count)
-                   {
-                       var detail =
-                           new RegData()
-                           {
-                               _id = holder[x]._id,
-                               emailAddress = holder[x].emailAddress,
-                               userName = holder[x].userName,
-                               password = holder[x].password,
-                           };
-                       json[x] = detail;
-                       x++;
-                   }
-               }
-              using (var cursor = col.Find(new BsonDocument()).ToCursor())
-               {
-                   while (cursor.MoveNext())
-                   {
-                       foreach (var doc in cursor.Current)
-                       {
-                            json = JArray.Parse(doc.ToJson());
-                           //holder.(doc);// new object({ doc. });
-                       }
-                   }
-               }*/
-            // Console.WriteLine(col);
-            // await col.InsertOneAsync(newReg);
-           // return new JsonResult(json);
         }
 
         //register new user account
@@ -211,7 +226,7 @@ namespace AccountsController.Controllers
             var newReg = new UserRecord
             {
                 _id = Guid.NewGuid(),
-                baseRecords = new RegData
+                regRecords = new RegData
                 {
                     emailAddress = data.emailAddress,
                     userName = data.userName,
