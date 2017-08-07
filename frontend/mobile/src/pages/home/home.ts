@@ -9,7 +9,20 @@ import firebase from 'firebase';
 })
 export class HomePage {
 
+  pagezz: Array<{ title: string, Location: any, active: boolean, icon: string }>;
+  rightMenuItems: Array<{ icon: string, active: boolean }>;
+  state: any;
+
   constructor(public navCtrl: NavController) {
+
+    this.pagezz = [
+      { title: 'Crossing the mara', Location: 'MyProfile', active: true, icon: 'play' },
+      { title: 'Soccer challenge', Location: 'MyProfile', active: true, icon: 'play' },
+        { title: 'Snoaking', Location: 'MyProfile', active: true, icon: 'play' },
+          { title: 'Swimming', Location: 'MyProfile', active: true, icon: 'play' },
+      
+ ];
+
 }
 logout(){
   firebase.auth().signOut().then(res=>{
@@ -29,4 +42,8 @@ this.navCtrl.setRoot('LoginPage');
     following: 1052,
     posts: 35
   };
+
+  
+
+  
 }
