@@ -17,7 +17,9 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
     "MongoDB.Driver": "2.4.4",
-    "Microsoft.NETCore.Portable.Compatibility": "1.0.1"
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "Microsoft.AspNetCore.Mvc.WebApiCompatShim": "1.0.1",
+    "Microsoft.AspNetCore.Diagnostics": "1.0.0"
   },
 
   "tools": {

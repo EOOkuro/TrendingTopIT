@@ -1,25 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using Newtonsoft.Json.Linq;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Text;
 using TrendingTopApi.dbConfig;
 using TrendingTopApi.objectFolder;
-
 
 namespace AccountsController.Controllers
 {
 
     [Route("api/[controller]")]
+    //[EnableCors(o:"")]
     public class AccountsController : Controller
     {
         MongoClient client;
         
         [HttpGet]
+        [ActionName("getUser")]
         public JsonResult GetUser(string userId,string pass)
         {
             client = new MongoClient();
@@ -186,12 +183,10 @@ namespace AccountsController.Controllers
             #region establsh connection to mongoDB
             client = new MongoClient();
             var db = client.GetDatabase(dbSet.DB_NAME);
-            db.DropCollection("userDetails");
             var col = db.GetCollection<UserRecord>("userDetails");
             #endregion
-            
+
             #region check if user name or email exist
-            var existingUserName = col.Find(new BsonDocument("baseRecords.userName", data.userName)).FirstOrDefault();
             if (data.userName == null | data.userName == "")
             {
                 msg = new returnMSG
@@ -201,6 +196,8 @@ namespace AccountsController.Controllers
                 };
                 return msg;
             }
+            var existingUserName = col.Find(x => x.baseRecords.userName == data.userName).FirstOrDefault();
+           
             if (existingUserName != null)
             {
                 msg = new returnMSG
@@ -210,7 +207,7 @@ namespace AccountsController.Controllers
                 };
                 return msg;
             }
-            var existingEmail = col.Find(new BsonDocument("baseRecords.emailAddress", data.emailAddress)).FirstOrDefault();
+            var existingEmail = col.Find(x => x.baseRecords.emailAddress == data.emailAddress).FirstOrDefault();
             if (existingEmail != null)
             {
                 msg = new returnMSG
@@ -223,16 +220,20 @@ namespace AccountsController.Controllers
             #endregion
             
             string salt = Util.getSalt();
+            DateTime today = DateTime.Now;
             var newReg = new UserRecord
             {
                 _id = Guid.NewGuid(),
                 regRecords = new RegData
                 {
-                    emailAddress = data.emailAddress,
-                    userName = data.userName,
-                    dateRegistred = DateTime.Now,
+                    dateRegistred = today,
                     passSalt = salt,
                     password = Util.getHash(data.password, salt)
+                },
+                baseRecords = new BaseData
+                {
+                    emailAddress = data.emailAddress,
+                    userName = data.userName,
                 }
             };
              col.InsertOneAsync(newReg);
@@ -245,21 +246,23 @@ namespace AccountsController.Controllers
         }
 
         [HttpPut]
-        public returnMSG UpdateUser(ProfileRecord profileVal,string Userid)
+        public returnMSG updateUser(ProfileRecord rec,string userId)
         {
+            object idObject = userId;
             client = new MongoClient();
             RegData validRegRec = new RegData();
             ProfileRecord validProfile = new ProfileRecord();
             var db = client.GetDatabase(dbSet.DB_NAME);
             var col = db.GetCollection<UserRecord>("userDetails");
             var msg = new returnMSG();
-            var filter = Builders<UserRecord>.Filter.Eq(x => x._id, Userid);
-            var update = col.UpdateOne(filter, Builders<UserRecord>.Update.Set(x => x.profile, profileVal));
-            //var holder = col.Find(x => x.baseRecords.userName == userId).FirstOrDefault();
-
-
-
-            return msg;
+            var filter = Builders<UserRecord>.Filter.Eq("_Id", idObject);
+            //var holder = col.Find(_ => true).FirstOrDefault();
+            var update = Builders<UserRecord>.Update.Set("profile", rec);
+            var result = col.UpdateOne(filter, update);
+            return new returnMSG
+            {
+                message = result.ModifiedCount.ToString()
+            };
         }
     }
 }
