@@ -35,13 +35,10 @@ page-login {
         background-size: 1800% 1800%;
         animation: rainbow 60s linear infinite;
     }
-
-    .text{
-  
-   color: lightslategray;
+    .text {
+        color: lightslategray;
         background-size: 1800% 1800%;
         animation: rainbow 60s linear infinite;
-
     }
     @keyframes rainbow {
         0% {
@@ -87,9 +84,6 @@ page-login {
     .login-button {
         text-transform: none;
         border-radius: 3px !important;
-        background:white;
-        color:grey;
-  
     }
     // Facebook icon
     ion-icon {
