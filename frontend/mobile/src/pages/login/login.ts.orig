@@ -34,6 +34,7 @@ export class LoginPage {
   }
 
   login() {
+<<<<<<< HEAD
     firebase.auth().signInWithEmailAndPassword(this.user.email, this.user.password)
       .then(firebaseSuccess => {
         this.navCtrl.setRoot('HomePage');
@@ -42,6 +43,23 @@ export class LoginPage {
       }).catch(err => {
         console.log("Error is " + JSON.stringify(err));
       });
+=======
+this.navCtrl.setRoot('HomePage');
+  }
+ facebookLogin() {
+   console.log("login to facebook");
+  this.facebook.login(['email']).then(res=>{
+const facebookCredentials=firebase.auth.FacebookAuthProvider.credential(res.authResponse.accessToken);
+firebase.auth().signInWithCredential(facebookCredentials).then(firebaseSuccess=>{
+this.navCtrl.setRoot('HomePage');
+}).catch(firebaseError=>{
+  console.log("Error with credentials is "+JSON.stringify(firebaseError));
+})
+  }).catch(err=>{
+console.log("Error is "+JSON.stringify(err));
+  }); 
+
+>>>>>>> master
   }
   facebookLogin() {
     console.log("login to facebook");
