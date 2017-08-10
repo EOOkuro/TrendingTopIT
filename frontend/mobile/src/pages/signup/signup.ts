@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import firebase from 'firebase';
 import { User } from './../../models/user';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
@@ -37,7 +37,8 @@ export class SignupPage {
     //more messages
   }
   submitAttempt: boolean = false;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public menu:MenuController) {
+  menu.swipeEnable(false);
   }
   ionViewWillLoad() {
 

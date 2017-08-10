@@ -6,8 +6,13 @@
     <img class="logo" src="assets/img/logo/logo.png" />
     <div padding>
         <ion-item>
-
+<<<<<<< HEAD
+        
             <ion-input type="text" placeholder="Username"  [(ngModel)]="user.email"></ion-input>
+=======
+
+            <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+>>>>>>> develop
             <ion-icon name="ios-eye-outline" item-right></ion-icon>
         </ion-item>
         <ion-item>
