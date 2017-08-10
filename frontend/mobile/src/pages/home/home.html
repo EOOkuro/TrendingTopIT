@@ -1,109 +1,112 @@
-<ion-content  padding class="transparent-header">
-<ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle>
+<ion-content padding class="transparent-header">
+    <ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-        <ion-title>Home</ion-title>
-    </ion-navbar>
-</ion-header>
- <div   id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}"  style="background-size: cover; height: 40%;"></div>
- <!-- <div  id="profile-bg" style="background:rgba(0,0,0,0.7); background-size: 100% 400px; height: 40%;"></div> -->
-  <div id="content"  class="no-scroll">
-    <div id="profile-info"   >
+            <ion-title>Home</ion-title>
+        </ion-navbar>
+    </ion-header>
+    <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}" style="background-size: cover; height: 40%;"></div>
+    <!-- <div  id="profile-bg" style="background:rgba(0,0,0,0.7); background-size: 100% 400px; height: 40%;"></div> -->
+    <div id="content" class="no-scroll">
+
+        <div id="profile-info">
 
 
 
-      <!-- <img id="profile-image" [src]="user.profileImage"> -->
-      <h3 id="profile-name" style="color: white;">Welcome</h3>
-      <p class="profile-description" style="color: white;">{{user.description}}</p>
-      <!-- <h3 id="profile-name">{{user.name}}</h3>       -->
-      <ion-row>
+            <!-- <img id="profile-image" [src]="user.profileImage"> -->
+            <h3 id="profile-name" style="color: white;">Welcome</h3>
 
-      <ion-col col-6>
+            <p class="profile-description" style="color: white;">{{user.description}}</p>
+            <!-- <h3 id="profile-name">{{user.name}}</h3>       -->
+            <ion-row>
 
-       <button ion-button style="width: 100%; background: gray; " >Create my #Trend</button>
+                <ion-col col-6>
 
-      </ion-col>
+                    <button (click)="logout()" ion-button style="width: 100%; background: gray; ">Create my #Trend</button>
 
-       <ion-col col-6>
+                </ion-col>
 
-        <button ion-button style="width: 100%; background:lightgray;" color="light">How it works</button>
+                <ion-col col-6>
 
-      </ion-col>
+                    <button ion-button style="width: 100%; background:lightgray;" color="light">How it works</button>
 
-
-      </ion-row>
-
-<ion-row style="background:black; width:120%; margin-left:-10%;  line-height: 300%;">
-
-<ion-col col-6 style="color: black;  background:lightgray; ">Discover</ion-col>
-<ion-col col-6 style="color: white; background: gray;">Top Trends</ion-col>
+                </ion-col>
 
 
-</ion-row>
-      <!-- <p>{{user.occupation}} &bull; {{user.location}}</p> -->
-    
-<div  class="scroll" >
+            </ion-row>
 
-        <div *ngFor="let p of pagezz" >
+            <ion-row style="background:black; width:120%; margin-left:-10%;  line-height: 300%;">
 
-
-          
-<ion-row style="background: black; width:120%; margin-left:-10%;" >
+                <ion-col col-6 style="color: black;  background:lightgray; ">Discover</ion-col>
+                <ion-col col-6 style="color: white; background: gray;">Top Trends</ion-col>
 
 
-  <ion-row style="width: 100%; background: black;" >
-<ion-col col-4>
+            </ion-row>
+            <!-- <p>{{user.occupation}} &bull; {{user.location}}</p> -->
 
-<img id="profile-image"  style="width:50px; margin-top:2%; height: 50px; display: flex;
+            <div class="scroll">
+
+                <div *ngFor="let p of pagezz">
+
+
+
+                    <ion-row style="background: black; width:120%; margin-left:-10%;">
+
+
+                        <ion-row style="width: 100%; background: black;">
+                            <ion-col col-4>
+
+                                <img id="profile-image" style="width:50px; margin-top:2%; height: 50px; display: flex;
   flex-direction: column; " [src]="user.profileImage">
-</ion-col>
+                            </ion-col>
 
-<ion-col col-4 style=" color: white; margin-left:-10%; margin-top:2%; ">
-<ion-row> {{p.title}}</ion-row>
-<ion-row><ion-icon name="pin"></ion-icon> &nbsp;  Lagos</ion-row>
-</ion-col>
+                            <ion-col col-4 style=" color: white; margin-left:-10%; margin-top:2%; ">
+                                <ion-row> {{p.title}}</ion-row>
+                                <ion-row>
+                                    <ion-icon name="pin"></ion-icon> &nbsp; Lagos</ion-row>
+                            </ion-col>
 
-<ion-col col-4 style=" margin-left:10%;  " >
+                            <ion-col col-4 style=" margin-left:10%;  ">
 
-<ion-icon style=" font-size:250%; color: white;" name="heart"></ion-icon>  <p style="color: white; margin-top:-2%;">like</p>
-</ion-col>
-
-
-  </ion-row>
-
+                                <ion-icon style=" font-size:250%; color: white;" name="heart"></ion-icon>
+                                <p style="color: white; margin-top:-2%;">like</p>
+                            </ion-col>
 
 
-
-</ion-row>
-
-
- <div  style="background-size:cover; width:120%; margin-left: -10%;  height: 200px; margin-bottom: -50px; ">
-
-  <img [src]="user.coverImage" style="width:100%; height: 70%;">
-  <h2 style="margin-top:-20%; color: white; text-shadow: 2px 2px black ;">#trending </h2>
-
-</div>
-
-
-</div>
-</div>
+                        </ion-row>
 
 
 
 
-   </div>
-
-    <hr/>
+                    </ion-row>
 
 
-  </div>
+                    <div style="background-size:cover; width:120%; margin-left: -10%;  height: 200px; margin-bottom: -50px; ">
+
+                        <img [src]="user.coverImage" style="width:100%; height: 70%;">
+                        <h2 style="margin-top:-20%; color: white; text-shadow: 2px 2px black ;">#trending </h2>
+
+                    </div>
 
 
-<!-- <button ion-button secondary (click)="logout()">Logout</button> -->
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <hr/>
+
+
+    </div>
+
+
+
 
 
 
 </ion-content>
-

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import firebase from 'firebase';
 
 @IonicPage()
@@ -13,8 +13,8 @@ export class HomePage {
   rightMenuItems: Array<{ icon: string, active: boolean }>;
   state: any;
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController,public menu:MenuController) {
+menu.swipeEnable(true);
     this.pagezz = [
       { title: 'Crossing the mara', Location: 'MyProfile', active: true, icon: 'play' },
       { title: 'Soccer challenge', Location: 'MyProfile', active: true, icon: 'play' },

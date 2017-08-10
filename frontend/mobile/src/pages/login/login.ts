@@ -1,9 +1,9 @@
-import { User } from './../../models/user';
 
+import { User } from './../../models/user';
 import { Component } from '@angular/core';
 
 
-import { AlertController, App, LoadingController, IonicPage, NavController } from 'ionic-angular';
+import { AlertController, App, LoadingController, IonicPage, NavController, MenuController } from 'ionic-angular';
 import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 import firebase from 'firebase';
@@ -19,14 +19,17 @@ export class LoginPage {
   public loginForm: any;
   public backgroundImage = 'assets/img/background/background-5.jpg';
   userProfile: any = null;
-  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController,
+  constructor(public nav: NavController, public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
+   public menu: MenuController,
     public app: App, public facebook: Facebook, private googlePlus: GooglePlus, private twitter: TwitterConnect) {
-    firebase.auth().onAuthStateChanged(user => {
+    menu.swipeEnable(false);
+      firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.userProfile = user;
-        this.navCtrl.setRoot('HomePage');
-        console.log(user);
+        
+        this.nav.setRoot('HomePage');
+        console.log("auth changed:"+user.email);
       } else {
         this.userProfile = null;
       }
@@ -36,7 +39,7 @@ export class LoginPage {
   login() {
     firebase.auth().signInWithEmailAndPassword(this.user.email, this.user.password)
       .then(firebaseSuccess => {
-        this.navCtrl.setRoot('HomePage');
+        this.nav.setRoot('HomePage');
       }).catch(firebaseError => {
         console.log("Error with credentials is " + JSON.stringify(firebaseError));
       }).catch(err => {
@@ -48,7 +51,8 @@ export class LoginPage {
     this.facebook.login(['email']).then(res => {
       const facebookCredentials = firebase.auth.FacebookAuthProvider.credential(res.authResponse.accessToken);
       firebase.auth().signInWithCredential(facebookCredentials).then(firebaseSuccess => {
-        this.navCtrl.setRoot('HomePage');
+        this.nav.setRoot('HomePage');// User is signed in.
+        
       }).catch(firebaseError => {
         console.log("Error with credentials is " + JSON.stringify(firebaseError));
       })
@@ -67,8 +71,8 @@ export class LoginPage {
       console.log(res);
       firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))
         .then(success => {
-          console.log("Firebase success: " + JSON.stringify(success));
-          this.navCtrl.setRoot('HomePage');
+          
+          this.nav.setRoot('HomePage');
         })
         .catch(error => console.log("Firebase failure: " + JSON.stringify(error)));
     }).catch(err => console.error("Error: ", + err));
@@ -84,7 +88,7 @@ export class LoginPage {
       firebase.auth().signInWithCredential(twitterCredential)
         .then(success => {
           console.log("Firebase success: " + JSON.stringify(success));
-          this.navCtrl.setRoot('HomePage');
+          this.nav.setRoot('HomePage');
         })
         .catch(error => console.log("Firebase failure: " + JSON.stringify(error)));
     }, error => {
@@ -93,7 +97,7 @@ export class LoginPage {
   }
 
   goToSignup() {
-    this.navCtrl.push('SignupPage');
+    this.nav.push('SignupPage');
   }
 
 }
