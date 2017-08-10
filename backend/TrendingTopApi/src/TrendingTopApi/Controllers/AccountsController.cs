@@ -248,20 +248,19 @@ namespace AccountsController.Controllers
         [HttpPut]
         public returnMSG updateUser(ProfileRecord rec,string userId)
         {
-            object idObject = userId;
+            Guid idObject = Guid.Parse(userId);
             client = new MongoClient();
             RegData validRegRec = new RegData();
             ProfileRecord validProfile = new ProfileRecord();
             var db = client.GetDatabase(dbSet.DB_NAME);
             var col = db.GetCollection<UserRecord>("userDetails");
             var msg = new returnMSG();
-            var filter = Builders<UserRecord>.Filter.Eq("_Id", idObject);
-            //var holder = col.Find(_ => true).FirstOrDefault();
-            var update = Builders<UserRecord>.Update.Set("profile", rec);
-            var result = col.UpdateOne(filter, update);
+            var update = Builders<UserRecord>.Update.Set(x => x.profile, rec);
+            var result = col.UpdateOne(user => user._id == idObject, update);
             return new returnMSG
             {
-                message = result.ModifiedCount.ToString()
+                message = "Record updated successful",
+                value = true
             };
         }
     }
