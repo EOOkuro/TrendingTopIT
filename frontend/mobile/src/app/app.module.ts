@@ -1,3 +1,4 @@
+import { LoginService } from './../providers/login-service/login-service';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -42,7 +43,8 @@ export const firebaseConfig={
     SplashScreen,
     Facebook,
     GooglePlus,
-    TwitterConnect,    
+    TwitterConnect,
+    LoginService,    
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

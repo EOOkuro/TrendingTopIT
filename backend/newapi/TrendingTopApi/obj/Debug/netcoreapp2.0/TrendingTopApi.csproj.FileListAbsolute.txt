@@ -1,0 +1,12 @@
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/bin/Debug/netcoreapp2.0/libe_sqlite3.so
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/bin/Debug/netcoreapp2.0/TrendingTopApi.deps.json
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/bin/Debug/netcoreapp2.0/TrendingTopApi.runtimeconfig.json
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/bin/Debug/netcoreapp2.0/TrendingTopApi.runtimeconfig.dev.json
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/bin/Debug/netcoreapp2.0/TrendingTopApi.dll
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/bin/Debug/netcoreapp2.0/TrendingTopApi.pdb
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/obj/Debug/netcoreapp2.0/TrendingTopApi.csproj.CoreCompileInputs.cache
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/obj/Debug/netcoreapp2.0/UserSecretsAssemblyInfo.cs
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/obj/Debug/netcoreapp2.0/TrendingTopApi.AssemblyInfoInputs.cache
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/obj/Debug/netcoreapp2.0/TrendingTopApi.AssemblyInfo.cs
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/obj/Debug/netcoreapp2.0/TrendingTopApi.dll
+/home/laetadcon0016/Documents/trendingtopit/TrendingTopIT/migration/TrendingTopApi/obj/Debug/netcoreapp2.0/TrendingTopApi.pdb

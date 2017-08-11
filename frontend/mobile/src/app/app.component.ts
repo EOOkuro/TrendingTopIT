@@ -96,7 +96,12 @@ tohome()
 
 }
   
+logout(){
+  firebase.auth().signOut().then(res=>{
+this.nav.setRoot('LoginPage');
+  });
 
+}
 
 
 

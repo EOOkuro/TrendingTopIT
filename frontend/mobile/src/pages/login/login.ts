@@ -1,7 +1,8 @@
+import { LoginService } from './../../providers/login-service/login-service';
+import { Http } from '@angular/http';
 
 import { User } from './../../models/user';
 import { Component } from '@angular/core';
-
 
 import { AlertController, App, LoadingController, IonicPage, NavController, MenuController } from 'ionic-angular';
 import { Facebook } from '@ionic-native/facebook';
@@ -22,6 +23,7 @@ export class LoginPage {
   constructor(public nav: NavController, public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
    public menu: MenuController,
+   public loginService:LoginService,
     public app: App, public facebook: Facebook, private googlePlus: GooglePlus, private twitter: TwitterConnect) {
     menu.swipeEnable(false);
       firebase.auth().onAuthStateChanged(user => {
@@ -37,8 +39,21 @@ export class LoginPage {
   }
 
   login() {
+    var authService=this.loginService;
     firebase.auth().signInWithEmailAndPassword(this.user.email, this.user.password)
       .then(firebaseSuccess => {
+        firebase.auth().currentUser.getIdToken().then(function(idToken) {
+  console.log(idToken);
+  //make secure call to api
+authService.getinfo(idToken).then(data=>{
+  console.log(data);
+}).catch(error=>{
+  console.log(error);
+});
+}).catch(function(error) {
+  console.log("could not get the token");
+});
+
         this.nav.setRoot('HomePage');
       }).catch(firebaseError => {
         console.log("Error with credentials is " + JSON.stringify(firebaseError));

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response, Headers, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
 import firebase from 'firebase';
 /*
@@ -15,15 +15,17 @@ export class LoginService {
     console.log('Hello LoginService Provider');
    
   }
+  
+getinfo(accessToken) {
+return new Promise(resolve => {
+var headers:any = new Headers();
+let requestOptions = new RequestOptions({ headers: headers });
+headers.append('Authorization', 'Bearer ' + accessToken);
+this.http.get('http://localhost:5000/api/values/5', requestOptions).subscribe(data => {
+resolve(data);
 
-  get isLoggedIn(): boolean {
-    var user = firebase.auth().currentUser;
+}) 
+});
 
-if (user) {
-  return true;
-} else {
-  return false
 }
-  }
-
 }
