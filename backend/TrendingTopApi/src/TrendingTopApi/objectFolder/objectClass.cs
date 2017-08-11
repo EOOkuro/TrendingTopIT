@@ -23,7 +23,8 @@ namespace TrendingTopApi.objectFolder
     //data format for userRecords
     public class UserRecord
     {
-        public Object _id { get; set; }
+        [BsonId]
+        public Guid _id { get; set; }
         public RegData regRecords { get; set; }
         public BaseData baseRecords { get; set; }
         public ProfileRecord profile { get; set; }
