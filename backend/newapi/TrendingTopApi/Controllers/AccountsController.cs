@@ -197,6 +197,8 @@ namespace TrendingTopApi.Controllers
                 return msg;
             }
             var existingUserName = col.Find(x => x.baseRecords.userName == data.userName).FirstOrDefault();
+            
+            
            
             if (existingUserName != null)
             {
